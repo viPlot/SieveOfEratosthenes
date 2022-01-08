@@ -9,7 +9,7 @@ public class Main {
 
     }
     private static int setEndNum() {
-        System.out.println("Введите конечное число для поиска: ");
+        System.out.print("Введите конечное число для поиска: ");
         Scanner in = new Scanner(System.in);
         int lastNum = in.nextInt();
         return lastNum;
@@ -28,6 +28,8 @@ public class Main {
                     primes[i * j] = false;
             bitSet.set(i);
         }
+
+        System.out.print("Простые числа до " + num + ": ");
         for (int i = 0; i < primes.length; i++)
             if (primes[i]) {
                 bitSet.set(i);
